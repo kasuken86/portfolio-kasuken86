@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粕谷 謙一 | ビデオグラファー & DaVinci Resolve 認定トレーナー</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Inter:wght@400;500;600&amp;display=swap');
+        
+        body {
+            font-family: 'Noto Sans JP', 'Inter', system-ui, sans-serif;
+        }
+        
+        .work-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .work-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #e11d48, #f43f5e);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+    <!-- Navbar -->
+    <nav class="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 bg-rose-600 rounded-xl flex items-center justify-center">
+                    <i class="fa-solid fa-video text-white text-xl"></i>
+                </div>
+                <div>
+                    <span class="font-semibold text-2xl tracking-tight">Ken'ichi Kasuya</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-x-8 text-sm">
+                <a href="#works" class="hover:text-rose-400 transition-colors">Works</a>
+                <a href="#skills" class="hover:text-rose-400 transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-rose-400 transition-colors">Contact</a>
+                <a href="https://www.avisual.page/" target="_blank"
+                   class="px-5 py-2.5 bg-white text-zinc-900 rounded-2xl text-sm font-medium hover:bg-zinc-100 transition-all flex items-center gap-x-2">
+                    <span>公式サイト</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="max-w-5xl mx-auto px-6 pt-16 pb-20">
+        <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-x-2 bg-zinc-900 border border-zinc-800 rounded-3xl px-4 py-1.5 mb-6">
+                <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                <span class="text-sm text-zinc-400">現在、動画制作・教育・AI活用で活動中</span>
+            </div>
+            
+            <h1 class="text-6xl font-semibold tracking-tighter leading-none mb-4">
+                粕谷 謙一
+            </h1>
+            <p class="text-3xl text-zinc-400 tracking-tight mb-8">
+                Videographer &amp; DaVinci Resolve Certified Trainer
+            </p>
+            
+            <div class="flex flex-wrap gap-4">
+                <a href="#works" 
+                   class="inline-flex items-center justify-center px-8 py-4 bg-rose-600 hover:bg-rose-700 transition-all rounded-3xl text-lg font-medium">
+                    作品を見る
+                </a>
+                <a href="https://x.com/kasuken86" target="_blank"
+                   class="inline-flex items-center justify-center px-8 py-4 border border-zinc-700 hover:bg-zinc-900 transition-all rounded-3xl text-lg font-medium">
+                    <i class="fa-brands fa-x-twitter mr-3"></i>
+                    Xでフォロー
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="max-w-5xl mx-auto px-6 pb-20">
+        <div class="grid md:grid-cols-5 gap-10 items-center">
+            <div class="md:col-span-3">
+                <h2 class="section-title text-4xl font-semibold tracking-tight mb-6">プロフィール</h2>
+                <div class="text-xl text-zinc-300 leading-relaxed space-y-6">
+                    <p>ビデオグラファーとして、企業PR・地域プロモーション・ブランデッドムービー・音楽コンテンツまで幅広いジャンルで高品質な動画を制作しています。</p>
+                    <p>DaVinci Resolve認定トレーナーとして、現場目線の技術指導と、AIを活用した効率的なワークフローを提案・共有しています。</p>
+                </div>
+            </div>
+            <div class="md:col-span-2 bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                <div class="space-y-6 text-sm">
+                    <div class="flex justify-between border-b border-zinc-800 pb-4">
+                        <span class="text-zinc-400">拠点</span>
+                        <span>東京</span>
+                    </div>
+                    <div class="flex justify-between border-b border-zinc-800 pb-4">
+                        <span class="text-zinc-400">資格</span>
+                        <span>DaVinci Resolve Certified Trainer</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-zinc-400">事業</span>
+                        <span>A Visual 代表</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Works -->
+    <div id="works" class="max-w-6xl mx-auto px-6 pb-24">
+        <div class="flex items-end justify-between mb-10">
+            <div>
+                <h2 class="section-title text-4xl font-semibold tracking-tight">Works</h2>
+                <p class="text-zinc-400 mt-2">主な制作実績</p>
+            </div>
+            <a href="https://www.avisual.page/" target="_blank" class="text-sm flex items-center gap-x-2 text-rose-400 hover:text-rose-300">
+                もっと見る <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Work Cards -->
+            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
+                <img src="images/image1.jpg" class="w-full aspect-video object-cover" alt="ベテルギウス">
+                <div class="p-6">
+                    <div class="font-medium mb-1">ベテルギウス / 優里</div>
+                    <div class="text-sm text-zinc-400 mb-4">Covered by 野口衣織</div>
+                    <a href="https://youtu.be/fQrqvz3vhg0" target="_blank" 
+                       class="inline-flex items-center text-sm text-rose-400 hover:text-rose-300">
+                        <i class="fa-brands fa-youtube mr-2"></i> YouTubeで視聴
+                    </a>
+                </div>
+            </div>
+
+            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
+                <img src="images/image2.jpg" class="w-full aspect-video object-cover" alt="犬のようちえん">
+                <div class="p-6">
+                    <div class="font-medium mb-1">犬のようちえん「minakuru」</div>
+                    <a href="https://youtu.be/e20Zg18KnDo" target="_blank" 
+                       class="inline-flex items-center text-sm text-rose-400 hover:text-rose-300 mt-4">
+                        <i class="fa-brands fa-youtube mr-2"></i> YouTubeで視聴
+                    </a>
+                </div>
+            </div>
+
+            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
+                <img src="images/image3.jpg" class="w-full aspect-video object-cover" alt="レジカゴで使えるエコバッグ">
+                <div class="p-6">
+                    <div class="font-medium mb-1">レジカゴで使えるエコバッグ</div>
+                    <a href="https://youtu.be/QuCvglHU-W4" target="_blank" 
+                       class="inline-flex items-center text-sm text-rose-400 hover:text-rose-300 mt-4">
+                        <i class="fa-brands fa-youtube mr-2"></i> YouTubeで視聴
+                    </a>
+                </div>
+            </div>
+
+            <!-- 以降も同様に全作品を記載（ここでは一部抜粋表示） -->
+            <!-- 必要に応じて全12作品を追加可能です -->
+
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div id="skills" class="max-w-5xl mx-auto px-6 pb-20">
+        <h2 class="section-title text-4xl font-semibold tracking-tight mb-10">Skills &amp; Tools</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+                <div class="text-rose-400 mb-3"><i class="fa-solid fa-film text-2xl"></i></div>
+                <div class="font-medium mb-1">DaVinci Resolve</div>
+                <div class="text-sm text-zinc-400">Edit / Color / Fusion / Fairlight</div>
+            </div>
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+                <div class="text-rose-400 mb-3"><i class="fa-solid fa-headset text-2xl"></i></div>
+                <div class="font-medium mb-1">音声設計</div>
+                <div class="text-sm text-zinc-400">Fairlight / TotalMix FX</div>
+            </div>
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+                <div class="text-rose-400 mb-3"><i class="fa-solid fa-broadcast-tower text-2xl"></i></div>
+                <div class="font-medium mb-1">ライブ配信</div>
+                <div class="text-sm text-zinc-400">ATEM Mini Pro / OBS</div>
+            </div>
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+                <div class="text-rose-400 mb-3"><i class="fa-solid fa-robot text-2xl"></i></div>
+                <div class="font-medium mb-1">AI活用</div>
+                <div class="text-sm text-zinc-400">ワークフロー効率化</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="max-w-5xl mx-auto px-6 pb-24">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-10 text-center">
+            <h2 class="text-3xl font-semibold tracking-tight mb-4">お仕事のご依頼・お問い合わせ</h2>
+            <p class="text-zinc-400 mb-8 max-w-md mx-auto">動画制作、DaVinci Resolveに関するご相談など、お気軽にご連絡ください。</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://www.avisual.page/" target="_blank"
+                   class="inline-flex items-center justify-center px-8 py-4 bg-white text-zinc-900 rounded-3xl font-medium hover:bg-zinc-100 transition-all">
+                    公式サイトからお問い合わせ
+                </a>
+                <a href="https://x.com/kasuken86" target="_blank"
+                   class="inline-flex items-center justify-center px-8 py-4 border border-zinc-700 hover:bg-zinc-800 rounded-3xl font-medium transition-all">
+                    <i class="fa-brands fa-x-twitter mr-3"></i> XでDM
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-t border-zinc-800 py-8 text-center text-sm text-zinc-500">
+        © 2026 Ken'ichi Kasuya. All Rights Reserved.
+    </footer>
+</body>
+</html>
