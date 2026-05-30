@@ -7,8 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: 'Noto Sans JP', system-ui, -apple-system, sans-serif; }
-        .work-card { transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1); }
+        body { font-family: 'Noto Sans JP', system-ui, sans-serif; }
+        .work-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .work-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
         .section-title { position: relative; display: inline-block; }
         .section-title:after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 3px; background: linear-gradient(to right, #e11d48, #f43f5e); border-radius: 3px; }
@@ -22,11 +22,10 @@
                 <div class="w-10 h-10 bg-rose-600 rounded-2xl flex items-center justify-center">
                     <i class="fa-solid fa-video text-white text-xl"></i>
                 </div>
-                <div>
-                    <span class="font-semibold text-2xl tracking-tight">Ken'ichi Kasuya</span>
-                </div>
+                <span class="font-semibold text-2xl tracking-tight">Ken'ichi Kasuya</span>
             </div>
             <div class="hidden md:flex items-center gap-x-8 text-sm">
+                <a href="#about" class="hover:text-rose-400 transition-colors">About</a>
                 <a href="#works" class="hover:text-rose-400 transition-colors">Works</a>
                 <a href="#skills" class="hover:text-rose-400 transition-colors">Skills</a>
                 <a href="#contact" class="hover:text-rose-400 transition-colors">Contact</a>
@@ -38,7 +37,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <div class="max-w-5xl mx-auto px-6 pt-20 pb-16">
         <div class="max-w-3xl">
             <div class="inline-flex items-center gap-x-2 bg-zinc-900 border border-zinc-800 rounded-3xl px-4 py-1.5 mb-6 text-sm">
@@ -50,178 +49,196 @@
             <p class="text-3xl md:text-4xl text-zinc-400 tracking-tight mb-10">Videographer &amp; DaVinci Resolve Certified Trainer</p>
             
             <div class="flex flex-wrap gap-4">
-                <a href="#works" class="px-9 py-4 bg-rose-600 hover:bg-rose-700 active:bg-rose-800 transition-all rounded-3xl text-lg font-medium">作品一覧を見る</a>
+                <a href="#works" class="px-9 py-4 bg-rose-600 hover:bg-rose-700 rounded-3xl text-lg font-medium transition-all">作品を見る</a>
                 <a href="https://x.com/kasuken86" target="_blank" 
-                   class="px-9 py-4 border border-zinc-700 hover:bg-zinc-900 transition-all rounded-3xl text-lg font-medium flex items-center gap-x-3">
-                    <i class="fa-brands fa-x-twitter text-xl"></i>
+                   class="px-9 py-4 border border-zinc-700 hover:bg-zinc-900 rounded-3xl text-lg font-medium flex items-center gap-x-3 transition-all">
+                    <i class="fa-brands fa-x-twitter"></i>
                     <span>Xでフォロー</span>
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- Works Section -->
+    <!-- About / Profile -->
+    <div id="about" class="max-w-6xl mx-auto px-6 pb-20">
+        <div class="grid md:grid-cols-5 gap-x-12 items-center">
+            <div class="md:col-span-3 mb-10 md:mb-0">
+                <h2 class="section-title text-4xl font-semibold tracking-tight mb-6">プロフィール</h2>
+                <div class="text-xl text-zinc-300 leading-relaxed space-y-5">
+                    <p>ビデオグラファーとして、企業PR・地域プロモーション・ブランデッドムービー・音楽関連コンテンツまで幅広く手がけています。</p>
+                    <p>DaVinci Resolve認定トレーナーとして、現場で培った実践的な技術とAIを活用した効率的なワークフローを指導・共有しています。</p>
+                </div>
+            </div>
+            
+            <!-- 拠点情報カード -->
+            <div class="md:col-span-2 bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                <div class="space-y-5 text-sm">
+                    <div class="flex justify-between items-center border-b border-zinc-800 pb-4">
+                        <span class="text-zinc-400">拠点</span>
+                        <span class="font-medium">東京</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-zinc-800 pb-4">
+                        <span class="text-zinc-400">資格</span>
+                        <span class="font-medium">DaVinci Resolve Certified Trainer</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-zinc-400">事業</span>
+                        <span class="font-medium">A Visual 代表</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Works -->
     <div id="works" class="max-w-7xl mx-auto px-6 pb-24">
         <div class="flex items-end justify-between mb-12">
             <div>
                 <h2 class="section-title text-5xl font-semibold tracking-tight">Works</h2>
-                <p class="text-xl text-zinc-400 mt-3">主な制作実績（2026年時点）</p>
+                <p class="text-xl text-zinc-400 mt-3">主な制作実績</p>
             </div>
         </div>
 
-        <!-- 作品グリッド（全12作品） -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <!-- 1 -->
-            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+            <!-- 1. ベテルギウス -->
+            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
                 <img src="images/image1.jpg" class="w-full aspect-video object-cover" alt="ベテルギウス">
                 <div class="p-6">
                     <div class="font-semibold text-lg mb-1">ベテルギウス / 優里</div>
-                    <div class="text-zinc-400 text-sm mb-4">Covered by 野口衣織</div>
-                    <a href="https://youtu.be/fQrqvz3vhg0" target="_blank" 
-                       class="inline-flex items-center text-rose-400 hover:text-rose-300 text-sm font-medium">
-                        <i class="fa-brands fa-youtube mr-2"></i> YouTubeで視聴
+                    <div class="text-sm text-zinc-400 mb-4">Covered by 野口衣織</div>
+                    <a href="https://youtu.be/fQrqvz3vhg0" target="_blank" class="text-rose-400 hover:text-rose-300 text-sm flex items-center gap-x-2">
+                        <i class="fa-brands fa-youtube"></i> <span>YouTubeで視聴</span>
                     </a>
                 </div>
             </div>
 
-            <!-- 2 -->
-            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+            <!-- 2. 犬のようちえん -->
+            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
                 <img src="images/image2.jpg" class="w-full aspect-video object-cover" alt="犬のようちえん">
                 <div class="p-6">
                     <div class="font-semibold text-lg mb-1">犬のようちえん「minakuru」</div>
-                    <a href="https://youtu.be/e20Zg18KnDo" target="_blank" 
-                       class="inline-flex items-center text-rose-400 hover:text-rose-300 text-sm font-medium mt-4">
-                        <i class="fa-brands fa-youtube mr-2"></i> YouTubeで視聴
+                    <a href="https://youtu.be/e20Zg18KnDo" target="_blank" class="text-rose-400 hover:text-rose-300 text-sm flex items-center gap-x-2 mt-4">
+                        <i class="fa-brands fa-youtube"></i> <span>YouTubeで視聴</span>
                     </a>
                 </div>
             </div>
 
-            <!-- 3 -->
-            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
-                <img src="images/image3.jpg" class="w-full aspect-video object-cover" alt="レジカゴで使えるエコバッグ">
+            <!-- 3. レジカゴで使えるエコバッグ -->
+            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
+                <img src="images/image3.jpg" class="w-full aspect-video object-cover" alt="レジカゴ">
                 <div class="p-6">
                     <div class="font-semibold text-lg mb-1">レジカゴで使えるエコバッグ</div>
-                    <a href="https://youtu.be/QuCvglHU-W4" target="_blank" 
-                       class="inline-flex items-center text-rose-400 hover:text-rose-300 text-sm font-medium mt-4">
-                        <i class="fa-brands fa-youtube mr-2"></i> YouTubeで視聴
+                    <a href="https://youtu.be/QuCvglHU-W4" target="_blank" class="text-rose-400 hover:text-rose-300 text-sm flex items-center gap-x-2 mt-4">
+                        <i class="fa-brands fa-youtube"></i> <span>YouTubeで視聴</span>
                     </a>
                 </div>
             </div>
 
-            <!-- 4 -->
-            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+            <!-- 4. MOTHER 糸井重里 -->
+            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
                 <img src="images/image4.jpg" class="w-full aspect-video object-cover" alt="MOTHER 糸井重里">
                 <div class="p-6">
                     <div class="font-semibold text-lg mb-1">『MOTHER』『MOTHER2』Switch配信について</div>
-                    <div class="text-zinc-400 text-sm mb-4">糸井重里よりご挨拶</div>
-                    <a href="https://youtu.be/I3VixF5Wc6M" target="_blank" 
-                       class="inline-flex items-center text-rose-400 hover:text-rose-300 text-sm font-medium">
-                        <i class="fa-brands fa-youtube mr-2"></i> YouTubeで視聴
+                    <div class="text-sm text-zinc-400 mb-4">糸井重里よりご挨拶</div>
+                    <a href="https://youtu.be/I3VixF5Wc6M" target="_blank" class="text-rose-400 hover:text-rose-300 text-sm flex items-center gap-x-2">
+                        <i class="fa-brands fa-youtube"></i> <span>YouTubeで視聴</span>
                     </a>
                 </div>
             </div>
 
-            <!-- 5 -->
-            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+            <!-- 5. ほぼ日の學校 -->
+            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
                 <img src="images/image5.jpg" class="w-full aspect-video object-cover" alt="ほぼ日の學校">
                 <div class="p-6">
                     <div class="font-semibold text-lg mb-1">ほぼ日の學校</div>
-                    <div class="text-zinc-400 text-sm mb-4">【大泉洋さんは「おもしろい」に抗えない】</div>
-                    <a href="https://youtu.be/ACeixzkY9jg" target="_blank" 
-                       class="inline-flex items-center text-rose-400 hover:text-rose-300 text-sm font-medium">
-                        <i class="fa-brands fa-youtube mr-2"></i> YouTubeで視聴
+                    <div class="text-sm text-zinc-400 mb-4">【大泉洋さんは「おもしろい」に抗えない】</div>
+                    <a href="https://youtu.be/ACeixzkY9jg" target="_blank" class="text-rose-400 hover:text-rose-300 text-sm flex items-center gap-x-2">
+                        <i class="fa-brands fa-youtube"></i> <span>YouTubeで視聴</span>
                     </a>
                 </div>
             </div>
 
-            <!-- 6 -->
-            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+            <!-- 6. 名古屋市西区PR -->
+            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
                 <img src="images/image6.jpg" class="w-full aspect-video object-cover" alt="名古屋市西区PR">
                 <div class="p-6">
                     <div class="font-semibold text-lg mb-1">名古屋市西区PR映像</div>
-                    <div class="text-zinc-400 text-sm mb-4">「君を夢中にさせるまち」</div>
-                    <a href="https://youtu.be/kjG_mWTbdIA" target="_blank" 
-                       class="inline-flex items-center text-rose-400 hover:text-rose-300 text-sm font-medium">
-                        <i class="fa-brands fa-youtube mr-2"></i> YouTubeで視聴
+                    <div class="text-sm text-zinc-400 mb-4">「君を夢中にさせるまち」</div>
+                    <a href="https://youtu.be/kjG_mWTbdIA" target="_blank" class="text-rose-400 hover:text-rose-300 text-sm flex items-center gap-x-2">
+                        <i class="fa-brands fa-youtube"></i> <span>YouTubeで視聴</span>
                     </a>
                 </div>
             </div>
 
-            <!-- 7 -->
-            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+            <!-- 7. 宮島醤油 -->
+            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
                 <img src="images/image7.jpg" class="w-full aspect-video object-cover" alt="宮島醤油">
                 <div class="p-6">
                     <div class="font-semibold text-lg mb-1">宮島醤油 ブランデッドムービー</div>
-                    <div class="text-zinc-400 text-sm mb-4">「美味しいは幸せの調味料だ」</div>
-                    <a href="https://youtu.be/k0qdIOW7cYo" target="_blank" 
-                       class="inline-flex items-center text-rose-400 hover:text-rose-300 text-sm font-medium">
-                        <i class="fa-brands fa-youtube mr-2"></i> YouTubeで視聴
+                    <div class="text-sm text-zinc-400 mb-4">「美味しいは幸せの調味料だ」</div>
+                    <a href="https://youtu.be/k0qdIOW7cYo" target="_blank" class="text-rose-400 hover:text-rose-300 text-sm flex items-center gap-x-2">
+                        <i class="fa-brands fa-youtube"></i> <span>YouTubeで視聴</span>
                     </a>
                 </div>
             </div>
 
-            <!-- 8 -->
-            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+            <!-- 8. Hobonichi Techo 2025 -->
+            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
                 <img src="images/image9.jpg" class="w-full aspect-video object-cover" alt="Hobonichi">
                 <div class="p-6">
                     <div class="font-semibold text-lg mb-1">Hobonichi Techo 2025</div>
-                    <div class="text-zinc-400 text-sm mb-4">Full Lineup Introduction</div>
-                    <a href="https://youtu.be/1lBFBPXVLVc" target="_blank" 
-                       class="inline-flex items-center text-rose-400 hover:text-rose-300 text-sm font-medium">
-                        <i class="fa-brands fa-youtube mr-2"></i> YouTubeで視聴
+                    <div class="text-sm text-zinc-400 mb-4">Full Lineup Introduction</div>
+                    <a href="https://youtu.be/1lBFBPXVLVc" target="_blank" class="text-rose-400 hover:text-rose-300 text-sm flex items-center gap-x-2">
+                        <i class="fa-brands fa-youtube"></i> <span>YouTubeで視聴</span>
                     </a>
                 </div>
             </div>
 
-            <!-- 9 -->
-            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+            <!-- 9. MOTHER ニューポーク・パルコ・シティ -->
+            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
                 <img src="images/image8.jpg" class="w-full aspect-video object-cover" alt="MOTHER ニューポーク">
                 <div class="p-6">
                     <div class="font-semibold text-lg mb-1">『MOTHER』新イベント予告</div>
-                    <div class="text-zinc-400 text-sm mb-4">ニューポーク・パルコ・シティ開催！</div>
-                    <a href="https://youtu.be/yguv98YwGiQ" target="_blank" 
-                       class="inline-flex items-center text-rose-400 hover:text-rose-300 text-sm font-medium">
-                        <i class="fa-brands fa-youtube mr-2"></i> YouTubeで視聴
+                    <div class="text-sm text-zinc-400 mb-4">ニューポーク・パルコ・シティ開催！</div>
+                    <a href="https://youtu.be/yguv98YwGiQ" target="_blank" class="text-rose-400 hover:text-rose-300 text-sm flex items-center gap-x-2">
+                        <i class="fa-brands fa-youtube"></i> <span>YouTubeで視聴</span>
                     </a>
                 </div>
             </div>
 
-            <!-- 10 -->
-            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+            <!-- 10. 田口壮 -->
+            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
                 <img src="images/image10.jpg" class="w-full aspect-video object-cover" alt="田口壮">
                 <div class="p-6">
                     <div class="font-semibold text-lg mb-1">元メジャーリーガー田口壮</div>
-                    <div class="text-zinc-400 text-sm mb-4">vol.003「クソ真面目で、ピリピリしてて」</div>
-                    <a href="https://youtu.be/c5DG5O3yg5s" target="_blank" 
-                       class="inline-flex items-center text-rose-400 hover:text-rose-300 text-sm font-medium">
-                        <i class="fa-brands fa-youtube mr-2"></i> YouTubeで視聴
+                    <div class="text-sm text-zinc-400 mb-4">vol.003「クソ真面目で、ピリピリしてて」</div>
+                    <a href="https://youtu.be/c5DG5O3yg5s" target="_blank" class="text-rose-400 hover:text-rose-300 text-sm flex items-center gap-x-2">
+                        <i class="fa-brands fa-youtube"></i> <span>YouTubeで視聴</span>
                     </a>
                 </div>
             </div>
 
-            <!-- 11 -->
-            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+            <!-- 11. エビ中 ファミえん -->
+            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
                 <img src="images/image11.jpg" class="w-full aspect-video object-cover" alt="エビ中 ファミえん">
                 <div class="p-6">
                     <div class="font-semibold text-lg mb-1">エビ中 夏のファミリー遠足</div>
-                    <div class="text-zinc-400 text-sm mb-4">ファミえん 令和元年 in 山中湖</div>
-                    <a href="https://youtu.be/U2kCCqmNFf4" target="_blank" 
-                       class="inline-flex items-center text-rose-400 hover:text-rose-300 text-sm font-medium">
-                        <i class="fa-brands fa-youtube mr-2"></i> YouTubeで視聴
+                    <div class="text-sm text-zinc-400 mb-4">ファミえん 令和元年 in 山中湖</div>
+                    <a href="https://youtu.be/U2kCCqmNFf4" target="_blank" class="text-rose-400 hover:text-rose-300 text-sm flex items-center gap-x-2">
+                        <i class="fa-brands fa-youtube"></i> <span>YouTubeで視聴</span>
                     </a>
                 </div>
             </div>
 
-            <!-- 12 -->
-            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+            <!-- 12. エビ中 ホールツアー -->
+            <div class="work-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
                 <img src="images/image12.jpg" class="w-full aspect-video object-cover" alt="エビ中 ホールツアー">
                 <div class="p-6">
                     <div class="font-semibold text-lg mb-1">エビ中 秋冬ホールツアー 2019</div>
-                    <div class="text-zinc-400 text-sm mb-4">～世界のみなさんおめでとうアイドルって楽しい～</div>
-                    <a href="https://youtu.be/ZmQTLPWp3nQ" target="_blank" 
-                       class="inline-flex items-center text-rose-400 hover:text-rose-300 text-sm font-medium">
-                        <i class="fa-brands fa-youtube mr-2"></i> YouTubeで視聴
+                    <div class="text-sm text-zinc-400 mb-4">～世界のみなさんおめでとうアイドルって楽しい～</div>
+                    <a href="https://youtu.be/ZmQTLPWp3nQ" target="_blank" class="text-rose-400 hover:text-rose-300 text-sm flex items-center gap-x-2">
+                        <i class="fa-brands fa-youtube"></i> <span>YouTubeで視聴</span>
                     </a>
                 </div>
             </div>
@@ -260,15 +277,15 @@
     <div id="contact" class="max-w-5xl mx-auto px-6 pb-20">
         <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-12 text-center">
             <h2 class="text-4xl font-semibold tracking-tight mb-4">お仕事のご依頼・ご相談</h2>
-            <p class="text-xl text-zinc-400 mb-10 max-w-md mx-auto">動画制作、DaVinci Resolveに関するご相談など、お気軽にお問い合わせください。</p>
+            <p class="text-xl text-zinc-400 mb-10">動画制作、DaVinci Resolveに関するご相談など、お気軽にお問い合わせください。</p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://www.avisual.page/" target="_blank" 
-                   class="px-10 py-4 bg-white hover:bg-zinc-100 active:bg-zinc-200 transition-all text-zinc-900 rounded-3xl font-semibold text-lg">
+                   class="px-10 py-4 bg-white text-zinc-900 hover:bg-zinc-100 rounded-3xl font-semibold text-lg transition-all">
                     公式サイトからお問い合わせ
                 </a>
                 <a href="https://x.com/kasuken86" target="_blank" 
-                   class="px-10 py-4 border border-zinc-700 hover:bg-zinc-800 active:bg-zinc-900 transition-all rounded-3xl font-semibold text-lg flex items-center justify-center gap-x-3">
+                   class="px-10 py-4 border border-zinc-700 hover:bg-zinc-800 rounded-3xl font-semibold text-lg flex items-center justify-center gap-x-3 transition-all">
                     <i class="fa-brands fa-x-twitter text-2xl"></i>
                     <span>XでDMする</span>
                 </a>
